@@ -10,16 +10,16 @@ source:
   sha256: 9a2d8098e61a74473dd554bd21cd4ff5b7c67392767d7d394b397cccc18acacc
 
 build:
-  noarch: python
+  noarch: python 
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
   host:
-    - python
+    - python >= 3.9.0
     - pip
   run:
-    - python
+    - python >= 3.9.0
     - tornado
     - toolz
     - zict
